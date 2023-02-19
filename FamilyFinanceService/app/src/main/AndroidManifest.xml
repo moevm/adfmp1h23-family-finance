@@ -12,6 +12,15 @@
         android:theme="@style/Theme.FamilyFinanceService"
         tools:targetApi="31">
         <activity
+            android:name=".AddExpensesScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ExpensesScreen"
+            android:exported="false" />
+        <activity
+            android:name=".StatisticScreen"
+            android:exported="false" />
+        <activity
             android:name=".AddIncomeScreen"
             android:exported="false" />
         <activity

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,9 +13,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setTitle("FamilyFinanceService")
 
+        val statisticButton = findViewById<ImageButton>(R.id.statisticButton)
+        statisticButton.setOnClickListener {
+            val Intent = Intent(this, StatisticScreen::class.java)
+            startActivity(Intent)
+        }
+
         val incomeButton = findViewById<Button>(R.id.incomeButton)
         incomeButton.setOnClickListener {
             val Intent = Intent(this, IncomeScreen::class.java)
+            startActivity(Intent)
+        }
+
+        val expensesButton = findViewById<Button>(R.id.expensesButton)
+        expensesButton.setOnClickListener {
+            val Intent = Intent(this, ExpensesScreen::class.java)
             startActivity(Intent)
         }
     }
