@@ -1,7 +1,8 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.familyfinanceservice.R
 
 class AboutScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

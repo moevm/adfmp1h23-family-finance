@@ -1,10 +1,11 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import com.example.familyfinanceservice.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,13 +1,12 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.google.android.material.card.MaterialCardView
+import com.example.familyfinanceservice.R
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,10 +21,6 @@ class StatisticScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_statistic_screen)
         setTitle("Статистика")
-
-
-
-
     }
 
     fun openDatePickerFrom(view: View) {

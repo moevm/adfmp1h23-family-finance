@@ -1,4 +1,4 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import org.junit.Test
 

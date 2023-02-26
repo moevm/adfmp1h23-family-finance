@@ -1,8 +1,9 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.familyfinanceservice.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ExpensesScreen : AppCompatActivity() {

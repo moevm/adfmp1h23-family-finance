@@ -1,4 +1,4 @@
-package com.example.familyfinanceservice
+package com.etu.familyFinanceService
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
@@ -12,18 +12,19 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.familyfinanceservice.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddExpensesScreen : AppCompatActivity() {
+class AddIncomeScreen : AppCompatActivity() {
 
     var formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.US)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_expenses_screen)
-        setTitle("Добавить расход")
+        setContentView(R.layout.activity_add_income_screen)
+        setTitle("Добавить доход")
 
         val addCategoryButton = findViewById<FloatingActionButton>(R.id.addCategoryButton)
         addCategoryButton.setOnClickListener {
@@ -34,6 +35,8 @@ class AddExpensesScreen : AppCompatActivity() {
         removeCategoryButton.setOnClickListener {
             showRemoveCategoryDialog()
         }
+
+
     }
 
     fun showAddCategoryDialog(){
@@ -73,7 +76,7 @@ class AddExpensesScreen : AppCompatActivity() {
         builder.show()
     }
 
-    fun openDatePicker(view: View) {
+    fun openDatePicker(view: View){
         val getDate = Calendar.getInstance()
         val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ datePicker, i, i2, i3 ->
             val selectDate = Calendar.getInstance()
