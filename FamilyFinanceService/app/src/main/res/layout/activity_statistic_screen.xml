@@ -9,40 +9,44 @@
     <Button
         android:id="@+id/datePickerButton4"
         style="?android:spinnerStyle"
-        android:layout_width="179dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:onClick="openDatePickerTo"
         android:text="DD MM YYYY"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/datePickerButton2"
         style="?android:spinnerStyle"
-        android:layout_width="179dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="143dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
         android:onClick="openDatePickerFrom"
         android:text="DD MM YYYY"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="68dp"
         android:text="Период по:"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
@@ -64,11 +68,11 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="68dp"
         android:text="Период с:"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
@@ -76,9 +80,10 @@
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
         android:layout_height="331dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:stretchColumns="0, 1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton4">
 
@@ -234,5 +239,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <HorizontalScrollView
+        android:layout_width="409dp"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        tools:layout_editor_absoluteX="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="138dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="Продукты"
+                android:textSize="14sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="Транспорт"
+                android:textSize="14sp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="Спорт"
+                android:textSize="14sp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
