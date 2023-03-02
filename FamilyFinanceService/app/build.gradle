@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.familyfinanceservice'
+    namespace 'com.etu.familyFinanceService'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.familyfinanceservice"
+        applicationId "com.etu.familyFinanceService"
         minSdk 28
         targetSdk 33
         versionCode 1
