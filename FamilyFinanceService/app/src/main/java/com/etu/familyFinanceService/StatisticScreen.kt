@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.example.familyfinanceservice.R
+import com.etu.familyFinanceService.R
 import java.text.SimpleDateFormat
 import java.util.*
 
