@@ -21,5 +21,6 @@ class Test1 {
     fun test() {
         val date = Date(0)
         assert(formatDate(date) == "01 January 1970")
+
     }
 }
