@@ -13,13 +13,12 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.etu.familyFinanceService.R
+import com.etu.utils.formatDate
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.text.SimpleDateFormat
 import java.util.*
 
 class AddExpensesScreen : AppCompatActivity() {
-
-    var formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.US)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,7 +75,7 @@ class AddExpensesScreen : AppCompatActivity() {
             selectDate.set(Calendar.YEAR, i)
             selectDate.set(Calendar.MONTH, i2)
             selectDate.set(Calendar.DAY_OF_MONTH, i3)
-            val date = formatDate.format(selectDate.time)
+            val date = formatDate(selectDate.time)
             Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
             val datePickerButton = findViewById<Button>(R.id.datePickerButton)
             datePickerButton.text = date
