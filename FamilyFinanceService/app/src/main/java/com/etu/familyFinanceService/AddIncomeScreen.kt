@@ -26,6 +26,8 @@ class AddIncomeScreen() : AppCompatActivity() {
         setContentView(R.layout.activity_add_income_screen)
         setTitle("Добавить доход")
 
+
+
         val addCategoryButton = findViewById<FloatingActionButton>(R.id.addCategoryButton)
         addCategoryButton.setOnClickListener {
             showAddCategoryDialog()
