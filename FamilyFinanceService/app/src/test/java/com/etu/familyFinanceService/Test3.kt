@@ -29,5 +29,6 @@ class Test3 {
         expenses.editIncome(0, "asdasd", 20)
         assert(expenses.expenses.get(0).first == "asdasd")
         assert(expenses.expenses.get(0).second == 20)
+
     }
 }
