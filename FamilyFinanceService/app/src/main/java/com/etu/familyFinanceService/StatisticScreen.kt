@@ -7,12 +7,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.etu.familyFinanceService.R
+import com.etu.utils.formatDate
 import java.text.SimpleDateFormat
 import java.util.*
 
 class StatisticScreen : AppCompatActivity() {
 
-    var formatDate = SimpleDateFormat("dd MM YYYY", Locale.US)
     var dateFrom: Date = Date()
     var dateTo: Date = Date()
     var categories: Array<String> = arrayOf("Транспорт", "Продукты", "Развлечения", "АЗС", "Жилье", "з/п", "Вклад")
@@ -30,7 +30,7 @@ class StatisticScreen : AppCompatActivity() {
             selectDate.set(Calendar.YEAR, i)
             selectDate.set(Calendar.MONTH, i2)
             selectDate.set(Calendar.DAY_OF_MONTH, i3)
-            val date = formatDate.format(selectDate.time)
+            val date = formatDate(selectDate.time)
             dateFrom = selectDate.time
             Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
             val datePickerButton2 = findViewById<Button>(R.id.datePickerButton2)
@@ -46,7 +46,7 @@ class StatisticScreen : AppCompatActivity() {
             selectDate.set(Calendar.YEAR, i)
             selectDate.set(Calendar.MONTH, i2)
             selectDate.set(Calendar.DAY_OF_MONTH, i3)
-            val date = formatDate.format(selectDate.time)
+            val date = formatDate(selectDate.time)
             dateTo = selectDate.time
             Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
             val datePickerButton4 = findViewById<Button>(R.id.datePickerButton4)
