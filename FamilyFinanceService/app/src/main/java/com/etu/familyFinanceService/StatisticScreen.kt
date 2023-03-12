@@ -39,6 +39,8 @@ class StatisticScreen : AppCompatActivity() {
         datePicker.show()
     }
 
+
+
     fun openDatePickerTo(view: View) {
         val getDate = Calendar.getInstance()
         val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ datePicker, i, i2, i3 ->
