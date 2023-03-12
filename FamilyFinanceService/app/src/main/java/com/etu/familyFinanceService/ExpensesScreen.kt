@@ -12,6 +12,8 @@ class ExpensesScreen : AppCompatActivity() {
         setContentView(R.layout.activity_expenses_screen)
         setTitle("Расходы")
 
+
+
         val addExpensesButton = findViewById<FloatingActionButton>(R.id.addExpensesButton)
         addExpensesButton.setOnClickListener {
             val Intent = Intent(this, AddExpensesScreen::class.java)
