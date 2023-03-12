@@ -1,5 +1,6 @@
 package com.etu.familyFinanceService
 
+import com.etu.utils.formatDate
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.DialogInterface
@@ -15,12 +16,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.etu.familyFinanceService.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.text.SimpleDateFormat
+
 import java.util.*
 
-class AddIncomeScreen : AppCompatActivity() {
-
-    var formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.US)
+class AddIncomeScreen() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,19 +74,18 @@ class AddIncomeScreen : AppCompatActivity() {
 
     fun openDatePicker(view: View){
         val getDate = Calendar.getInstance()
-        val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener(this::onDateSet), getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH), getDate.get(Calendar.DAY_OF_MONTH))
+        val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ datePicker, i, i2, i3 ->
+            val selectDate = Calendar.getInstance()
+            selectDate.set(Calendar.YEAR, i)
+            selectDate.set(Calendar.MONTH, i2)
+            selectDate.set(Calendar.DAY_OF_MONTH, i3)
+            val date = formatDate(selectDate.time)
+            Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
+            val datePickerButton = findViewById<Button>(R.id.datePickerButton)
+            datePickerButton.text = date
+        }, getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH), getDate.get(Calendar.DAY_OF_MONTH))
         datePicker.show()
     }
 
-    fun onDateSet(datePicker: DatePicker, i: Int, i2: Int, i3: Int){
-        val selectDate = Calendar.getInstance()
-        selectDate.set(Calendar.YEAR, i)
-        selectDate.set(Calendar.MONTH, i2)
-        selectDate.set(Calendar.DAY_OF_MONTH, i3)
-        val date = formatDate.format(selectDate.time)
-        Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
-        val datePickerButton = findViewById<Button>(R.id.datePickerButton)
-        datePickerButton.text = date
-    }
 
 }
