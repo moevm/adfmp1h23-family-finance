@@ -9,6 +9,7 @@ import android.text.InputType
 import android.util.TypedValue
 import android.view.View
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -74,16 +75,19 @@ class AddIncomeScreen : AppCompatActivity() {
 
     fun openDatePicker(view: View){
         val getDate = Calendar.getInstance()
-        val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ datePicker, i, i2, i3 ->
-            val selectDate = Calendar.getInstance()
-            selectDate.set(Calendar.YEAR, i)
-            selectDate.set(Calendar.MONTH, i2)
-            selectDate.set(Calendar.DAY_OF_MONTH, i3)
-            val date = formatDate.format(selectDate.time)
-            Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
-            val datePickerButton = findViewById<Button>(R.id.datePickerButton)
-            datePickerButton.text = date
-        }, getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH), getDate.get(Calendar.DAY_OF_MONTH))
+        val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener(this::onDateSet), getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH), getDate.get(Calendar.DAY_OF_MONTH))
         datePicker.show()
     }
+
+    fun onDateSet(datePicker: DatePicker, i: Int, i2: Int, i3: Int){
+        val selectDate = Calendar.getInstance()
+        selectDate.set(Calendar.YEAR, i)
+        selectDate.set(Calendar.MONTH, i2)
+        selectDate.set(Calendar.DAY_OF_MONTH, i3)
+        val date = formatDate.format(selectDate.time)
+        Toast.makeText(this, "Date: " + date, Toast.LENGTH_SHORT).show()
+        val datePickerButton = findViewById<Button>(R.id.datePickerButton)
+        datePickerButton.text = date
+    }
+
 }
