@@ -25,8 +25,11 @@ jobs:
           java-version: 11
           distribution: 'adopt'
     
+      - name: Add rights
+        run: chmod +x ./FamilyFinanceService/gradlew
+    
       - name: Unit-tests
-        run: ./FamilyFinanceService/gradlew test
+        run: ./FamilyFinanceService/gradlew testDebugUnitTest
           
       - name: Test reporting
         uses: asadmansr/android-test-report-action@v1.2.0
