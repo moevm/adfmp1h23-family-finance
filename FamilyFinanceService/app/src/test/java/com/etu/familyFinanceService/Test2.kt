@@ -1,12 +1,7 @@
 package com.etu.familyFinanceService
 
 import com.etu.classes.IncomesList
-import com.etu.utils.formatDate
-import org.junit.Assert.*
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.junit.MockitoJUnitRunner
-import java.util.*
 
 
 /**
@@ -15,7 +10,6 @@ import java.util.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class Test2 {
-
 
     @Test
     fun test() {
