@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+env:
+  SOURCE_DIR: ${{ github.workspace }}
+
+on:
+  [push, pull_request]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: JAVA VERSION 11 SETUP
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'adopt'
+  
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+    
+      - name: Add rights
+        run: cd $SOURCE_DIR/FamilyFinanceService/ && chmod +x ./gradlew
+    
+      - name: Building
+        run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew build --warning-mode=all --stacktrace
+        
+      - name: Unit-tests
+        run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew test
+          
+      - name: Test reporting
+        uses: asadmansr/android-test-report-action@v1.2.0
+        if: ${{ always() }}
