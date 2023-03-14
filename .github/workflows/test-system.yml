@@ -22,10 +22,10 @@ jobs:
           distribution: 'adopt'
     
       - name: Add rights
-        run: chmod +x $SOURCE_DIR/FamilyFinanceService/gradlew
+        run: cd $SOURCE_DIR/FamilyFinanceService/ && chmod +x ./gradlew
     
       - name: Unit-tests
-        run: $SOURCE_DIR/FamilyFinanceService/gradlew testDebugUnitTest
+        run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew testDebugUnitTest
           
       - name: Test reporting
         uses: asadmansr/android-test-report-action@v1.2.0
