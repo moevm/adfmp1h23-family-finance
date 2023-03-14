@@ -26,8 +26,14 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
+      - name: CHMOD GRADLE
+        run: chmod +x ./FamilyFinanceService/gradlew
+        
+      - name: Building
+        run: ./FamilyFinanceService/gradlew build --warning-mode=all --stacktrace
+    
       - name: Unit-tests has already run
-        run: /FamilyFinanceService/gradlew test   
+        run: ./FamilyFinanceService/gradlew testDebugUnitTest   
           
       - name: Test reporting
         uses: asadmansr/android-test-report-action@v1.2.0
