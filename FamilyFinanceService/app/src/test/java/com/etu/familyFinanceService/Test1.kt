@@ -13,7 +13,6 @@ import java.util.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-@RunWith(MockitoJUnitRunner::class)
 class Test1 {
 
 
