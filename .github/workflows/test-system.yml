@@ -3,7 +3,7 @@
 name: CI
 
 env:
-  SOURCE_DIR: github.workspace
+  SOURCE_DIR: ${{ github.workspace }}
 
 on:
   [push, pull_request]
