@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Add rights
         run: ls
+        
       - name: Add rights 2
         run: cd $SOURCE_DIR && ls
             
