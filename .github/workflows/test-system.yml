@@ -24,6 +24,9 @@ jobs:
       - name: Add rights
         run: cd $SOURCE_DIR/FamilyFinanceService/ && chmod +x ./gradlew
     
+      - name: Building
+        run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew build --warning-mode=all --stacktrace
+        
       - name: Unit-tests
         run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew test
           
