@@ -27,7 +27,7 @@ jobs:
           cache: gradle
 
       - name: Unit-tests has already run
-        run: ./gradlew test   
+        run: ./FamilyFinanceService/gradlew test   
           
       - name: Test reporting
         uses: asadmansr/android-test-report-action@v1.2.0
