@@ -24,10 +24,6 @@ jobs:
         with:
           java-version: 11
           distribution: 'adopt'
-          cache: gradle
-
-      - name: CHMOD GRADLE
-        run: chmod +x ./FamilyFinanceService/gradlew
     
       - name: Unit-tests
         run: ./FamilyFinanceService/gradlew test
