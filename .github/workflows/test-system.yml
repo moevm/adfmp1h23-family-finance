@@ -26,17 +26,17 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
-      - name: SHOW DIRS
-        run: cd ./FamilyFinanceService && ls
+      - name: Open folder
+        run: cd ./FamilyFinanceService
 
       - name: CHMOD GRADLE
-        run: chmod +x ./FamilyFinanceService/gradlew
+        run: chmod +x ./gradlew
         
       - name: Building
-        run: ./FamilyFinanceService/gradlew build --warning-mode=all --stacktrace
+        run: ./gradlew build --warning-mode=all --stacktrace
     
-      - name: Unit-tests has already run
-        run: ./FamilyFinanceService/gradlew testDebugUnitTest   
+      - name: Unit-tests
+        run: ./gradlew test   
           
       - name: Test reporting
         uses: asadmansr/android-test-report-action@v1.2.0
