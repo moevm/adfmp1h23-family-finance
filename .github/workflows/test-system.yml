@@ -27,7 +27,7 @@ jobs:
           cache: gradle
 
       - name: SHOW DIRS
-        run: ls
+        run: cd ./FamilyFinanceService && ls
 
       - name: CHMOD GRADLE
         run: chmod +x ./FamilyFinanceService/gradlew
