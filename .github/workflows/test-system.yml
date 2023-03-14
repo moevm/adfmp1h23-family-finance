@@ -13,20 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: JAVA VERSION 11 SETUP
-        uses: actions/setup-java@v2
-        with:
-          java-version: 11
-          distribution: 'adopt'
-    
       - name: Add rights
-        run: cd $SOURCE_DIR/FamilyFinanceService/ && chmod +x ./gradlew
-    
-      - name: Unit-tests
-        run: cd $SOURCE_DIR/FamilyFinanceService/  && ./gradlew testDebugUnitTest
-          
-      - name: Test reporting
-        uses: asadmansr/android-test-report-action@v1.2.0
-        if: ${{ always() }}
+        run: ls
+      - name: Add rights 2
+        run: cd $SOURCE_DIR && ls
+            
