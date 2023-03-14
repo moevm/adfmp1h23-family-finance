@@ -26,6 +26,9 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
+      - name: SHOW DIRS
+        run: ls
+
       - name: CHMOD GRADLE
         run: chmod +x ./FamilyFinanceService/gradlew
         
