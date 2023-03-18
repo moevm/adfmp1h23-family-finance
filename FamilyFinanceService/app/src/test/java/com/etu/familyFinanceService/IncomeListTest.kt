@@ -9,10 +9,10 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class Test2 {
+class IncomeListTest {
 
     @Test
-    fun test() {
+    fun mainMethodsTest() {
         val incomes: IncomesList = IncomesList();
         incomes.addIncome("test", 100)
         incomes.addIncome("testtest", 100)
@@ -21,6 +21,12 @@ class Test2 {
         incomes.editIncome(0, "asdasd", 20)
         assert(incomes.incomes.get(0).first == "asdasd")
         assert(incomes.incomes.get(0).second == 20)
+        incomes.deleteIncome(0)
+        assert(incomes.incomes.size == 1)
+        assert(incomes.incomes.get(0).first == "testtest")
+        assert(incomes.incomes.get(0).second == 100)
+        incomes.deleteIncome(0)
+        assert(incomes.incomes.size == 0)
 
     }
 }

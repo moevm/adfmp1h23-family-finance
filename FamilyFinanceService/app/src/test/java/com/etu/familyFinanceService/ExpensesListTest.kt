@@ -9,19 +9,25 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class Test3 {
+class ExpensesListTest {
 
 
     @Test
-    fun test() {
+    fun mainMethodsTest() {
         val expenses: ExpensesList = ExpensesList();
-        expenses.addIncome("test", 100)
-        expenses.addIncome("testtest", 100)
+        expenses.addExpense("test", 100)
+        expenses.addExpense("testtest", 100)
         assert(expenses.expenses.get(0).first == "test")
         assert(expenses.expenses.get(0).second == 100)
-        expenses.editIncome(0, "asdasd", 20)
+        expenses.editExpense(0, "asdasd", 20)
         assert(expenses.expenses.get(0).first == "asdasd")
         assert(expenses.expenses.get(0).second == 20)
+        expenses.deleteExpense(0)
+        assert(expenses.expenses.size == 1)
+        assert(expenses.expenses.get(0).first == "testtest")
+        assert(expenses.expenses.get(0).second == 100)
+        expenses.deleteExpense(0)
+        assert(expenses.expenses.size == 0)
 
     }
 }

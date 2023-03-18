@@ -10,11 +10,11 @@ import java.util.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class Test1 {
+class UtilsTest {
 
 
     @Test
-    fun test() {
+    fun formatDateTest() {
         val date = Date(0)
         assert(formatDate(date) == "01 January 1970")
 
