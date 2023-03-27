@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Сумма до:"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton4" />
 
@@ -56,7 +56,7 @@
         android:layout_marginEnd="68dp"
         android:text="Период по:"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
@@ -82,7 +82,7 @@
         android:layout_marginTop="68dp"
         android:text="Период с:"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
@@ -317,7 +317,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Сумма от:"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton2" />
 
