@@ -28,6 +28,7 @@
         android:layout_marginTop="20dp"
         android:entries="@array/incomeSpinnerItems"
         android:minHeight="48dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -88,6 +89,7 @@
         android:background="#FFFFFF"
         android:text="Добавить"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton"
