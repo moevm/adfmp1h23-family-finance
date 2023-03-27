@@ -15,7 +15,6 @@ class StatisticScreen : AppCompatActivity() {
 
     var dateFrom: Date = Date()
     var dateTo: Date = Date()
-    var categories: Array<String> = arrayOf("Транспорт", "Продукты", "Развлечения", "АЗС", "Жилье", "з/п", "Вклад")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
