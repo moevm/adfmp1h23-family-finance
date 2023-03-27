@@ -64,7 +64,7 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Статистика"
@@ -89,7 +89,7 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="290dp"
+        android:layout_height="260dp"
         android:layout_marginTop="9dp"
         android:stretchColumns="0, 1"
         app:layout_constraintEnd_toEndOf="parent"
